@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodWave — Edge AI Emotion Music</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAV
+═══════════════════════════════════════ -->
+<nav class="nav">
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <div class="logo-box">🎵</div>
+      <span class="g-text">MoodWave</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#applications">Applications</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="learn-more.html" class="btn btn-ghost nav-cta">Learn More</a></li>
+      <li><a href="#demo" class="btn btn-primary nav-cta">Try Now →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="chip"><span class="chip-dot"></span>Edge AI · Real-time · CNN-Powered</span>
+      </div>
+      <h1 class="hero-title">Music That Feels<br><span class="g-text">What You Feel</span></h1>
+      <p class="hero-sub">MoodWave captures your facial expression, runs a CNN emotion model on-device, then curates a personalised Spotify playlist in your language — in seconds, entirely private.</p>
+      <div class="hero-btns">
+        <a href="#demo" class="btn btn-primary"><span>🎯</span> Start Detection</a>
+        <a href="learn-more.html" class="btn btn-ghost"><span>📖</span> Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div><span class="hs-num g-text">7</span><div class="hs-lbl">Emotions</div></div>
+        <div><span class="hs-num g-text">8</span><div class="hs-lbl">Languages</div></div>
+        <div><span class="hs-num g-text">50M+</span><div class="hs-lbl">Spotify Tracks</div></div>
+        <div><span class="hs-num g-text">&lt;2s</span><div class="hs-lbl">Detection</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-ring">
+        <div class="orbit orbit-a"><div class="orbit-dot od-teal"></div></div>
+        <div class="orbit orbit-b"><div class="orbit-dot od-violet"></div></div>
+        <div class="hero-face-icon" id="heroEmoji">😊</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PROCESS FLOW  — Image 1 style
+     (numbered steps with connectors, BEFORE camera)
+═══════════════════════════════════════ -->
+<section class="proc-section">
+  <div class="container">
+    <p class="proc-label">Process Flow</p>
+    <h2 class="proc-title">From Capture to <span class="g-text">Playlist</span></h2>
+    <div class="proc-steps">
+
+      <div class="proc-step">
+        <div class="proc-step-num">1</div>
+        <div class="proc-step-ico">📷</div>
+        <h4>Capture Face</h4>
+        <p>Webcam snapshot via browser — stream stops instantly after capture</p>
+      </div>
+      <div class="proc-connector"></div>
+
+      <div class="proc-step">
+        <div class="proc-step-num">2</div>
+        <div class="proc-step-ico">🔬</div>
+        <h4>AI Processing</h4>
+        <p>Brightness, alignment and stability checks gate the frame for clean input</p>
+      </div>
+      <div class="proc-connector"></div>
+
+      <div class="proc-step">
+        <div class="proc-step-num">3</div>
+        <div class="proc-step-ico">🧠</div>
+        <h4>Feature Extraction</h4>
+        <p>CNN extracts facial features — edges, textures and expression patterns</p>
+      </div>
+      <div class="proc-connector"></div>
+
+      <div class="proc-step">
+        <div class="proc-step-num">4</div>
+        <div class="proc-step-ico">📊</div>
+        <h4>Confidence Score</h4>
+        <p>7 emotion probabilities computed — highest score selected as final emotion</p>
+      </div>
+      <div class="proc-connector"></div>
+
+      <div class="proc-step">
+        <div class="proc-step-num">5</div>
+        <div class="proc-step-ico">🎵</div>
+        <h4>Playlist Output</h4>
+        <p>Emotion + language fed to Spotify engine — real tracks fetched and displayed</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     HOW THE SYSTEM WORKS — Images 2 & 3 style
+     (left text panel + right vertical step list)
+═══════════════════════════════════════ -->
+<section class="hsw-section">
+  <div class="container">
+    <div class="hsw-inner">
+      <!-- LEFT: explanation text -->
+      <div class="hsw-left">
+        <div class="hsw-left-label">Under the Hood</div>
+        <h2>How the System Works</h2>
+        <p>MoodWave uses a deep convolutional neural network to analyse your facial expression and detect the dominant emotion from 7 classes.</p>
+        <p>The model evaluates image patterns, textures, edge behaviour, and lighting to extract precise emotion features from your face.</p>
+        <p>Validation layers check brightness, alignment, and head stability before inference — ensuring only high-quality frames are analysed.</p>
+        <a href="learn-more.html" class="hsw-learn-link">Learn More →</a>
+      </div>
+      <!-- RIGHT: step-by-step list -->
+      <div class="hsw-steps">
+        <div class="hsw-step">
+          <div class="hsw-step-ico hsw-ico-1">📷</div>
+          <div class="hsw-step-txt">
+            <h5>Image Input</h5>
+            <p>Face captured via browser webcam and sent as base64 to Flask server</p>
+          </div>
+        </div>
+        <div class="hsw-step">
+          <div class="hsw-step-ico hsw-ico-2">🔧</div>
+          <div class="hsw-step-txt">
+            <h5>Preprocessing</h5>
+            <p>Resize to 48×48 · Grayscale conversion · Pixel normalisation (0–1 range)</p>
+          </div>
+        </div>
+        <div class="hsw-step">
+          <div class="hsw-step-ico hsw-ico-3">🧠</div>
+          <div class="hsw-step-txt">
+            <h5>CNN Inference</h5>
+            <p>Deep network forward pass — convolutional feature extraction across all layers</p>
+          </div>
+        </div>
+        <div class="hsw-step">
+          <div class="hsw-step-ico hsw-ico-4">📊</div>
+          <div class="hsw-step-txt">
+            <h5>Confidence + Features</h5>
+            <p>Softmax outputs 7 probability scores — highest confidence class selected</p>
+          </div>
+        </div>
+        <div class="hsw-step">
+          <div class="hsw-step-ico hsw-ico-5">✅</div>
+          <div class="hsw-step-txt">
+            <h5>Prediction Output</h5>
+            <p>Emotion label + confidence returned — fed directly to Spotify music engine</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     TIPS FOR BEST RESULTS — Image 4 style
+     (3×2 image cards with numbered badges)
+═══════════════════════════════════════ -->
+<section class="tips-section" id="tips">
+  <div class="container">
+    <div class="sec-head">
+      <span class="chip"><span class="chip-dot"></span>Guidelines</span>
+      <h2>Tips for <span class="g-text">Best Results</span></h2>
+      <p>Follow these guidelines for the most accurate emotion detection from MoodWave.</p>
+    </div>
+    <div class="tips-img-grid">
+
+      <div class="tip-img-card">
+        <div class="tip-img-wrap">
+          <div class="tip-img-placeholder tip-face-1">😊</div>
+          <div class="tip-card-num-badge">1</div>
+        </div>
+        <div class="tip-img-body">
+          <h5>Single Face Only</h5>
+          <p>Position one face clearly in the centre of the frame. Ensure no other faces appear in the background for clean detection.</p>
+        </div>
+      </div>
+
+      <div class="tip-img-card">
+        <div class="tip-img-wrap">
+          <div class="tip-img-placeholder tip-face-2">💡</div>
+          <div class="tip-card-num-badge">2</div>
+        </div>
+        <div class="tip-img-body">
+          <h5>Good Lighting</h5>
+          <p>Ensure your face is well-lit from the front. Avoid backlighting or dim rooms — brightness is validated before detection.</p>
+        </div>
+      </div>
+
+      <div class="tip-img-card">
+        <div class="tip-img-wrap">
+          <div class="tip-img-placeholder tip-face-3">😠</div>
+          <div class="tip-card-num-badge">3</div>
+        </div>
+        <div class="tip-img-body">
+          <h5>Show Clear Emotion</h5>
+          <p>Exaggerate your expression slightly — especially for subtle emotions like sadness or disgust. The CNN needs clear visual cues.</p>
+        </div>
+      </div>
+
+      <div class="tip-img-card">
+        <div class="tip-img-wrap">
+          <div class="tip-img-placeholder tip-face-4">📐</div>
+          <div class="tip-card-num-badge">4</div>
+        </div>
+        <div class="tip-img-body">
+          <h5>Correct Distance</h5>
+          <p>Sit 40–70 cm from the screen. Your face should fill roughly one-third of the camera view for optimal detection accuracy.</p>
+        </div>
+      </div>
+
+      <div class="tip-img-card">
+        <div class="tip-img-wrap">
+          <div class="tip-img-placeholder tip-face-5">🧘</div>
+          <div class="tip-card-num-badge">5</div>
+        </div>
+        <div class="tip-img-body">
+          <h5>Stay Still &amp; Straight</h5>
+          <p>Head tilt and movement are checked for stability. Keep your head level and avoid tilting more than a few degrees.</p>
+        </div>
+      </div>
+
+      <div class="tip-img-card">
+        <div class="tip-img-wrap">
+          <div class="tip-img-placeholder tip-face-6">🔒</div>
+          <div class="tip-card-num-badge">6</div>
+        </div>
+        <div class="tip-img-body">
+          <h5>Privacy First</h5>
+          <p>Camera stops the instant you capture. One frozen frame is sent to the local server only — nothing is stored or uploaded.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CAMERA / DEMO SECTION
+═══════════════════════════════════════ -->
+<section class="section section-alt" id="demo">
+  <div class="container">
+    <div class="sec-head">
+      <span class="chip"><span class="chip-dot"></span>Live Detection</span>
+      <h2>Detect Your <span class="g-text">Emotion</span></h2>
+      <p>Click <strong>Start Camera</strong>, position your face using the tips above, then <strong>Capture Photo</strong>. The AI analyses your expression instantly.</p>
+    </div>
+    <div class="camera-grid">
+      <div class="cam-card">
+        <div class="cam-topbar">
+          <div class="cam-topbar-left">
+            <div class="cam-led" id="camLed"></div>
+            <span id="camStatusTxt">Off</span>
+          </div>
+          <span class="cam-label">CNN · Edge Inference</span>
+        </div>
+        <div class="cam-viewport">
+          <div class="cam-placeholder" id="camPlaceholder" style="display:flex;flex-direction:column;align-items:center;">
+            <div class="cam-placeholder-icon">📷</div>
+            <p>Click "Start Camera" to begin</p>
+          </div>
+          <video id="videoEl" autoplay muted playsinline></video>
+          <img id="capturedImg" alt="Captured" style="display:none;width:100%;height:100%;object-fit:cover;transform:scaleX(-1);" />
+          <canvas id="canvasEl" style="display:none;"></canvas>
+          <div class="scan-layer" id="scanLayer">
+            <div class="scan-bar"></div>
+            <div class="corner c-tl"></div>
+            <div class="corner c-tr"></div>
+            <div class="corner c-bl"></div>
+            <div class="corner c-br"></div>
+          </div>
+          <div id="frozenBadge" style="display:none;position:absolute;top:10px;right:10px;
+            background:rgba(0,0,0,0.72);backdrop-filter:blur(6px);padding:5px 14px;
+            border-radius:50px;font-size:.78rem;font-weight:700;
+            color:var(--teal);border:1px solid rgba(0,229,200,0.35);">
+            📸 Photo Captured
+          </div>
+          <div class="cam-status-overlay" id="camStatusMsg"></div>
+        </div>
+        <div class="cam-controls">
+          <button id="btnStart"  class="btn-cam btn-cam-start"><span>📷</span> Start Camera</button>
+          <button id="btnDetect" class="btn-cam btn-cam-detect" disabled><span>🎯</span> Detect Emotion</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     RESULT SECTION (shown after detection)
+═══════════════════════════════════════ -->
+<section class="section" id="resultSection" style="display:none;padding-top:48px;">
+  <div class="container">
+    <div class="sec-head" style="margin-bottom:36px;">
+      <span class="chip"><span class="chip-dot"></span>Analysis Complete</span>
+      <h2>Your <span class="g-text">Emotional State</span></h2>
+    </div>
+
+    <!-- Emotion + confidence ring card -->
+    <div class="result-card-new">
+      <div class="result-card-left">
+        <div class="result-detected-label">DETECTED EMOTION</div>
+        <div class="result-emoji-row">
+          <span class="result-emoji-big" id="resEmoji">😊</span>
+          <span class="result-name-big g-text" id="resName">Happy</span>
+        </div>
+        <p class="result-classify-desc">This expression is classified as <strong id="resNameInline">Happy</strong> by the CNN model.</p>
+        <p class="result-desc" id="resDesc">Detecting…</p>
+      </div>
+      <div class="result-card-right">
+        <div class="conf-ring-wrap">
+          <svg class="conf-ring-svg" viewBox="0 0 120 120">
+            <circle class="conf-ring-bg"   cx="60" cy="60" r="50"/>
+            <circle class="conf-ring-fill" id="confRingFill" cx="60" cy="60" r="50"
+                    stroke-dasharray="314" stroke-dashoffset="314"/>
+          </svg>
+          <div class="conf-ring-center">
+            <span class="conf-ring-pct" id="resConfVal">—</span>
+            <span class="conf-ring-lbl">CONFIDENCE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All 7 emotion probability bars -->
+    <div class="emotion-prob-card">
+      <div class="emotion-prob-header">
+        <span class="emotion-prob-dot"></span>
+        <span class="emotion-prob-title">ALL EMOTION PROBABILITIES</span>
+      </div>
+      <div class="emotion-prob-grid" id="emotionGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     LANGUAGE SECTION (shown after detection)
+═══════════════════════════════════════ -->
+<section class="section section-alt" id="langSection" style="display:none;padding-top:48px;">
+  <div class="container">
+    <div class="sec-head" style="margin-bottom:36px;">
+      <span class="chip">Step 2</span>
+      <h2>Choose Your <span class="g-text">Music Language</span></h2>
+      <p>Select the language / regional style for your personalised playlist.</p>
+    </div>
+    <div class="lang-grid" id="langGrid"></div>
+    <div class="lang-action">
+      <button id="btnGetMusic" class="btn btn-primary" onclick="fetchMusic()">
+        <span>🎵</span> Get My Playlist
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MUSIC SECTION (shown after language pick)
+═══════════════════════════════════════ -->
+<section class="section" id="musicSection" style="display:none;padding-top:48px;">
+  <div class="container">
+    <div class="sec-head" style="margin-bottom:32px;">
+      <span class="chip"><span class="chip-dot"></span>Your Playlist</span>
+      <h2>Songs <span class="g-text">Curated for You</span></h2>
+    </div>
+    <div id="musicSpinner" class="spinner-wrap">
+      <div class="spinner"></div>
+      <p>Fetching your personalised playlist…</p>
+    </div>
+    <div class="playlist-meta-bar" id="playlistMetaBar" style="display:none;">
+      <h3 id="playlistTitle">Your Playlist</h3>
+      <span class="playlist-count" id="playlistCount"></span>
+    </div>
+    <div class="songs-grid" id="songsGrid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FEATURES
+═══════════════════════════════════════ -->
+<section class="section section-alt" id="features">
+  <div class="container">
+    <div class="sec-head">
+      <span class="chip">Technology</span>
+      <h2>Powered by <span class="g-text">Edge AI</span></h2>
+      <p>A complete on-device pipeline from face capture to personalised playlist.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon">🧠</div>
+        <h3>CNN Emotion Model</h3>
+        <p>A deep convolutional neural network classifies 7 emotions from facial expressions with high accuracy and speed.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">⚡</div>
+        <h3>Edge Inference</h3>
+        <p>All inference runs on your local Flask server — no cloud calls, no third-party AI APIs. Your face never leaves your machine.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">✅</div>
+        <h3>Smart Validation</h3>
+        <p>Brightness, face-area, alignment and stability checks ensure only clean frames reach the model before inference.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">📊</div>
+        <h3>Confidence Scoring</h3>
+        <p>All 7 emotion probabilities computed via softmax. The highest confidence class becomes the final emotion output.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🎵</div>
+        <h3>Spotify Music Engine</h3>
+        <p>Emotion mapped to curated keywords per language. Real tracks fetched live from Spotify's 50M+ catalogue.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🌍</div>
+        <h3>8 Language Regions</h3>
+        <p>English, Korean, Japanese, and 5 Indian regional languages — each with a dedicated emotion-to-keyword map.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     APPLICATIONS
+═══════════════════════════════════════ -->
+<section class="section" id="applications">
+  <div class="container">
+    <div class="sec-head">
+      <span class="chip">Use Cases</span>
+      <h2>Real-World <span class="g-text">Applications</span></h2>
+      <p>Emotion-aware music has measurable impact across health, productivity, and entertainment.</p>
+    </div>
+    <div class="apps-grid">
+      <div class="app-card"><span class="app-ico">🏥</span><div><h4>Mental Health Support</h4><p>Adaptive playlists for therapy sessions, reducing anxiety and supporting emotional regulation.</p></div></div>
+      <div class="app-card"><span class="app-ico">🎓</span><div><h4>Education &amp; Focus</h4><p>Detect student fatigue or frustration and switch to concentration-boosting background music.</p></div></div>
+      <div class="app-card"><span class="app-ico">🚗</span><div><h4>Smart Vehicles</h4><p>Calm stressed drivers automatically, reducing accident risk through mood-stabilising audio.</p></div></div>
+      <div class="app-card"><span class="app-ico">🏋️</span><div><h4>Fitness &amp; Wellness</h4><p>Detect motivation levels and auto-select BPM-matched workout tracks in real time.</p></div></div>
+      <div class="app-card"><span class="app-ico">🎮</span><div><h4>Gaming &amp; Entertainment</h4><p>Dynamic soundtracks that respond to player emotion, creating deeply immersive experiences.</p></div></div>
+      <div class="app-card"><span class="app-ico">🏢</span><div><h4>Workplace Wellbeing</h4><p>Office ambient music that adapts to collective mood, improving focus and comfort for all.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════ -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="sec-head">
+      <span class="chip">Get in Touch</span>
+      <h2>Have <span class="g-text">Questions?</span></h2>
+      <p>Reach out about the project, collaboration, or feedback.</p>
+    </div>
+    <div class="contact-inner">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="cName">Your Name</label>
+          <input id="cName" type="text" class="form-input" placeholder="e.g. Dirisala" required />
+        </div>
+        <div class="form-group">
+          <label for="cEmail">Email</label>
+          <input id="cEmail" type="email" class="form-input" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="cMsg">Message</label>
+          <textarea id="cMsg" class="form-textarea" placeholder="Tell us more…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit"><span>🚀</span> Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:14px;">
+          <div class="logo-box">🎵</div>
+          <span class="g-text" style="font-family:var(--font-h);font-size:1.25rem;font-weight:800;">MoodWave</span>
+        </div>
+        <p>Edge AI-powered emotion recognition with personalised music recommendation.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="#features">Features</a>
+        <a href="#tips">Guidelines</a>
+        <a href="learn-more.html">Technology</a>
+        <a href="#demo">Try Demo</a>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <a href="learn-more.html">Documentation</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 MoodWave. Powered by Deep Learning &amp; Edge Inference.</p>
+      <div class="tech-badges">
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Flask</span>
+        <span class="tech-badge">CNN</span>
+        <span class="tech-badge">MediaPipe</span>
+        <span class="tech-badge">Spotify</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" class="toast"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
